@@ -17,5 +17,5 @@ exports.removeDocument = (db, document, collection) => {
 
 exports.updateDocument = (db, document, update, collection) => {
     const coll = db.collection(collection);
-    coll.updateOne(document, { $set: update }, null);
+    return coll.updateOne(document, { $set: update }, null);
 };

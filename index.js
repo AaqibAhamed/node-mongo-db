@@ -20,6 +20,7 @@ MongoClient.connect(url).then((client) => {
             console.log("Found Documents:\n", docs);
 
             return dboper.updateDocument(db, { name: "Vadonut" }, { description: "Updated Test" }, "dishes");
+
         })
         .then((result) => {
             console.log("Updated Document:\n", result.result);
